@@ -85,21 +85,31 @@ for(const newQ of newQs){
             }
             if(correctAnswerSet.includes(target)){
                 correct.style.display = "block";
+                var response = function(){
+                    correct.style.display = "none";
+                    incorrect.style.display = "none";
+                }
+                setTimeout(response,500);  
             }   
             else{
                 incorrect.style.display = "block";
                 time = time-20;
+                var response = function(){
+                    correct.style.display = "none";
+                    incorrect.style.display = "none";
+                }
+                setTimeout(response,500);  
             }
 
 
-            var timeOut = function(){
+             var timeOut = function(){
                 btnHide.style.display = "none";
                 correct.style.display = "none";
                 incorrect.style.display = "none";
                 endGame.style.display = "block"; 
                 finalScore.textContent = "Score: " + (time-1).toString();
             }
-            setTimeout(timeOut,300);  
+            setTimeout(timeOut,500);  
         }
 
 // indicates game is still going==============================================================================
@@ -110,10 +120,20 @@ for(const newQ of newQs){
             }
             if(correctAnswerSet.includes(target)){
                 correct.style.display = "block"; 
+                var response = function(){
+                    correct.style.display = "none";
+                    incorrect.style.display = "none";
+                }
+                setTimeout(response,500);   
             }   
             else{
                 incorrect.style.display = "block";
                 time = time-20;
+                var response = function(){
+                    correct.style.display = "none";
+                    incorrect.style.display = "none";
+                }
+                setTimeout(response,500);  
             }
             question.textContent = questionSet[i][0];
             answer1.textContent = questionSet[i][1];
