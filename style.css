@@ -1,0 +1,85 @@
+.hiScor h1{
+    padding: 15px;
+    border-bottom:1px solid lightgray;
+}
+a:hover{
+    text-decoration: none;
+}
+.row{
+    width: 80%;
+    margin: auto;
+}
+.container{
+    margin-top: 100px;
+    width: 50%;
+}
+.container .hide{
+    text-align: center;
+    margin-top: 100px;
+    width: 50%;
+}
+.responses{
+    text-align: center;
+}
+.responses .correct{
+    position: relative;
+}
+.hiScor{
+    position: relative;
+    width: 50%;
+    text-align: left;
+    margin-top: 155px;
+}
+.btnHide{
+    display: none;
+}
+.viewHighscore{
+    height:50px;
+    margin-top: 5px;
+}
+ol{
+    padding-left: 0px;
+}
+.highScores{
+    text-align: left;
+    font-weight: bolder;
+    font-size: 20px;
+    padding-left: 0px;
+    width: 100%;
+    margin: auto;
+    margin-left: 25px;
+}
+.hide{
+    display: none;
+}
+.initialInput{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.playButton{
+    margin-top:20px;
+    border-top: 1px solid lightgray;
+}
+#buttons{
+    padding: 15px;
+    border-top:1px solid lightgray;
+}
+#timer{
+    float: right;
+} 
+
+#clearHigh{
+    position: absolute;
+    text-align: center;
+    top:3px;
+    right:15px;
+}
+@media only screen and (max-width:776px){
+    #clearHigh{
+        position: relative;
+        width:100%;
+        right:0px;
+        
+    }
+}
