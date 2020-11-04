@@ -26,17 +26,17 @@ var submit = document.querySelector(".submit");
 var inputValue = initialInput.nodeValue;
 var playButton = document.querySelector(".playButton");
 var questionSet = [
-    ["What is the longest that an elephant has ever lived? (That we know of)","101 years","89 years","86 years","94 years"],
-    ["How many rings are on the Olympic flag?","0","5","6","4"],     //<-------need to add in q's and answers
-    ["What is a tarsier?","A primate","A reptile","A rodent","A bird"],
-    ["How did Spider-Man get his powers?","Born with them","Military experiment gone awry","Woke up with them after a strange dream","Bitten by a radioactive spider"],
-    ["In darts, what's the most points you can score with a single throw?","20","50","60","100"],
-    ["Which of these animals does NOT appear in the Chinese zodiac?","Rabbit","Bear","Dragon","Dog"],
-    ["How many holes are on a standard bowling ball?","3","1","2","4"],
-    ["What are the main colors on the flag of Spain?","Black and yellow","Green and white","Blue and white","Red and yellow"],
-    ["What is the name of this symbol: ¶","Fermata","Pilcrow","Interrobang","Biltong"],
+    ["If para1 is the DOM object for a paragraph, what is the correct syntax to change the text within the paragraph?", "'New Text'?", "para1.value='New Text';", "para1.firstChild.nodeValue= 'New Text';", "para1.nodeValue='New Text';"],
+    ["JavaScript entities start with _______ and end with _________.", "Semicolon, colon", "Semicolon, Ampersand", "Ampersand, colon", "Ampersand, semicolon"],     
+    ["Which of the following best describes JavaScript?", "a low-level programming language.", "a scripting language precompiled in the browser.", "a compiled scripting language.", "an object-oriented scripting language."],
+    ["JavaScript is interpreted by _________", "Client", "Server", "Object", "None of the above"],
+    ["Using _______ statement is how you test for a specific condition.", "Select", "If", "Switch", "For"],
+    ["Which of the following are capabilities of functions in JavaScript?", "Return a value", "Accept parameters and Return a value", "Accept parameters", "None of the above"],
+    ["Which of the following is not a valid JavaScript variable name?", "2names", "_first_and_last_neames", "FirstAndLast", "None of the above"],
+    [" ______ tag is an extension to HTML that can enclose any number of JavaScript statements.", "<script>", "<body>", "<head>", "<title>"],
+    ["Why do JavaScript and Java have similar name?", "JavaScript is a stripped-down version of Java", "JavaScript's syntax is loosely based on Java's", "They both originated on the island of Java", "None of the above"],
 ];
-var correctAnswerSet = ["86 years", "5", "A primate","Bitten by a radioactive spider", "60", "Bear", "3", "Red and yellow", "Pilcrow"] //<--------need to enter actual answers
+var correctAnswerSet = ["para1.value='New Text';", "Ampersand, semicolon", "an object-oriented scripting language.", "Client", "If", "Accept parameters", "2names", "<script>", "JavaScript's syntax is loosely based on Java's"] //<--------need to enter actual answers
 
 //  Code for Game==================================================================================
 
@@ -206,15 +206,15 @@ function resetVars(){
     timer.textContent = "Score/Time: "+time.toString()
     initialInput.value = ""
     questionSet = [
-        ["What is the longest that an elephant has ever lived? (That we know of)","101 years","89 years","86 years","94 years"],
-        ["How many rings are on the Olympic flag?","0","5","6","4"],     //<-------need to add in q's and answers
-        ["What is a tarsier?","A primate","A reptile","A rodent","A bird"],
-        ["How did Spider-Man get his powers?","Born with them","Military experiment gone awry","Woke up with them after a strange dream","Bitten by a radioactive spider"],
-        ["In darts, what's the most points you can score with a single throw?","20","50","60","100"],
-        ["Which of these animals does NOT appear in the Chinese zodiac?","Rabbit","Bear","Dragon","Dog"],
-        ["How many holes are on a standard bowling ball?","3","1","2","4"],
-        ["What are the main colors on the flag of Spain?","Black and yellow","Green and white","Blue and white","Red and yellow"],
-        ["What is the name of this symbol: ¶","Fermata","Pilcrow","Interrobang","Biltong"],
+        ["If para1 is the DOM object for a paragraph, what is the correct syntax to change the text within the paragraph? (That we know of)","'New Text'?","para1.value='New Text';" ,"para1.firstChild.nodeValue= 'New Text';","para1.nodeValue='New Text';"],
+        ["JavaScript entities start with _______ and end with _________.","Semicolon, colon","Semicolon, Ampersand","Ampersand, colon"," Ampersand, semicolon"],     
+        ["Which of the following best describes JavaScript?","a low-level programming language.","a scripting language precompiled in the browser.","a compiled scripting language.","an object-oriented scripting language."],
+        ["JavaScript is interpreted by _________","Client","Server","Object","None of the above"],
+        ["Using _______ statement is how you test for a specific condition.","Select","If","Switch","For"],
+        ["Which of the following are capabilities of functions in JavaScript?","Return a value","Accept parameters and Return a value","Accept parameters","None of the above"],
+        ["HWhich of the following is not a valid JavaScript variable name?","2names","_first_and_last_neames","FirstAndLast","None of the above"],
+        [" ______ tag is an extension to HTML that can enclose any number of JavaScript statements.","<script>","<body>","<head>","<title>"],
+        ["Why so JavaScript and Java have similar name?","FJavaScript is a stripped-down version of Java","JavaScript's syntax is loosely based on Java's","They both originated on the island of Java","None of the above"],
     ];
 };
 
