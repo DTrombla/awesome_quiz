@@ -1,10 +1,5 @@
-ol{
-    padding-left: 0px;
-}
-.hiScor h1{
-    padding: 15px;
-    border-bottom:1px solid lightgray;
-}
+
+/* content at top of page */
 a:hover{
     text-decoration: none;
 }
@@ -12,6 +7,8 @@ a:hover{
     width: 80%;
     margin: auto;
 }
+
+/* main content containers */
 .container{
     margin-top: 100px;
     width: 50%;
@@ -24,11 +21,40 @@ a:hover{
 .hide{
     display: none;
 }
+
+/* during game styling */
 .responses{
     text-align: center;
 }
 .responses .correct{
     position: relative;
+}
+.buttons{
+    padding: 15px;
+    border-top:1px solid lightgray;
+}
+#timer{
+    float: right;
+} 
+.btnHide{
+    display: none;
+}
+
+/* submit screen styling */
+.initialInput{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* highscore page styling */
+ol{
+    padding-left: 0px;
+}
+.hiScor h1{
+    padding: 15px;
+    border-bottom:1px solid lightgray;
 }
 .hiScor{
     position: relative;
@@ -50,31 +76,17 @@ a:hover{
     margin: auto;
     margin-left: 25px;
 }
-.initialInput{
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.btnHide{
-    display: none;
-}
 .playButton{
     margin-top:20px;
     border-top: 1px solid lightgray;
 }
-.buttons{
-    padding: 15px;
-    border-top:1px solid lightgray;
-}
-#timer{
-    float: right;
-} 
 #clearHigh{
     position: absolute;
     text-align: center;
     top:3px;
     right:15px;
 }
+
 @media only screen and (max-width:776px){
     #clearHigh{
         position: relative;
