@@ -20,7 +20,9 @@ When the play button is pressed the starter content is shown. This page includes
 
 
 have fun with the quiz. https://dtrombla.github.io/awesome_quiz/
+
+
 ![Starting Gameplay](https://github.com/DTrombla/images/blob/main/Starter.PNG)
 ![During Gameplay](https://github.com/DTrombla/images/blob/main/During.PNG)
 ![Submit Screen](https://github.com/DTrombla/images/blob/main/Submit.PNG)
-![Highscore Screen](https://github.com/DTrombla/images/blob/main/Highscores.PNG)
+![Highscore Screen](https://github.com/DTrombla/images/blob/main/Highscore.PNG)
