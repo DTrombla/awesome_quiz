@@ -26,14 +26,17 @@ var submit = document.querySelector(".submit");
 var inputValue = initialInput.nodeValue;
 var playButton = document.querySelector(".playButton");
 var questionSet = [
-    ["Q1","A1","A2","A3","A4"],
-    ["Q2","A1","A2","correctAnswer","A4"],     //<-------need to add in q's and answers
-    ["Q3","A1","A2","A3","A4"],
-    ["Q4","A1","A2","A3","A4"],
-    ["Q5","A1","A2","A3","A4"],
-    ["Q6","A1","A2","A3","A4"],
+    ["What is the longest that an elephant has ever lived? (That we know of)","101 years","89 years","86 years","94 years"],
+    ["How many rings are on the Olympic flag?","0","5","6","4"],     //<-------need to add in q's and answers
+    ["What is a tarsier?","A primate","A reptile","A rodent","A bird"],
+    ["How did Spider-Man get his powers?","Born with them","Military experiment gone awry","Woke up with them after a strange dream","Bitten by a radioactive spider"],
+    ["In darts, what's the most points you can score with a single throw?","20","50","60","100"],
+    ["Which of these animals does NOT appear in the Chinese zodiac?","Rabbit","Bear","Dragon","Dog"],
+    ["How many holes are on a standard bowling ball?","3","1","2","4"],
+    ["What are the main colors on the flag of Spain?","Black and yellow","Green and white","Blue and white","Red and yellow"],
+    ["What is the name of this symbol: ¶","Fermata","Pilcrow","Interrobang","Biltong"],
 ];
-var correctAnswerSet = ["correctAnswer", "A1"] //<--------need to enter actual answers
+var correctAnswerSet = ["86 years", "5", "A primate","Bitten by a radioactive spider", "60", "Bear", "3", "Red and yellow", "Pilcrow"] //<--------need to enter actual answers
 
 //  Code for Game==================================================================================
 
@@ -203,12 +206,15 @@ function resetVars(){
     timer.textContent = "Score/Time: "+time.toString()
     initialInput.value = ""
     questionSet = [
-        ["Q1","A1","A2","A3","A4"],
-    ["Q2","A1","A2","correctAnswer","A4"],
-    ["Q3","A1","A2","A3","A4"],
-    ["Q4","A1","A2","A3","A4"],
-    ["Q5","A1","A2","A3","A4"],
-    ["Q6","A1","A2","A3","A4"],
+        ["What is the longest that an elephant has ever lived? (That we know of)","101 years","89 years","86 years","94 years"],
+        ["How many rings are on the Olympic flag?","0","5","6","4"],     //<-------need to add in q's and answers
+        ["What is a tarsier?","A primate","A reptile","A rodent","A bird"],
+        ["How did Spider-Man get his powers?","Born with them","Military experiment gone awry","Woke up with them after a strange dream","Bitten by a radioactive spider"],
+        ["In darts, what's the most points you can score with a single throw?","20","50","60","100"],
+        ["Which of these animals does NOT appear in the Chinese zodiac?","Rabbit","Bear","Dragon","Dog"],
+        ["How many holes are on a standard bowling ball?","3","1","2","4"],
+        ["What are the main colors on the flag of Spain?","Black and yellow","Green and white","Blue and white","Red and yellow"],
+        ["What is the name of this symbol: ¶","Fermata","Pilcrow","Interrobang","Biltong"],
     ];
 };
 
