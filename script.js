@@ -164,6 +164,7 @@ function correctAction(){
 //  allows for a pause between answering last question and seeing the submit screen
 function endgamePause(){
     var timeOut = function(){
+        timer.style.display = "none";
         btnHide.style.display = "none";
         correct.style.display = "none";
         incorrect.style.display = "none";
