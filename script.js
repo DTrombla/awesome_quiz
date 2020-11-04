@@ -35,18 +35,17 @@ var questionSet = [
 ];
 var correctAnswerSet = ["correctAnswer", "A1"] //<--------need to enter actual answers
 
-//Code for Game==================================================================================
+//  Code for Game==================================================================================
 
-//Gets scores from local storage, doesn't work as a function
+//  Gets scores from local storage, doesn't work as a function
 var scoreArr = JSON.parse(localStorage.getItem("permScore"));
-    if(scoreArr === null){
-        scoreArr = [];
-    }
+if(scoreArr === null){
+    scoreArr = [];
+}
 answerStart.addEventListener("click", function startQuiz(){
     topRightTimer();
     glitchHide();
     qGenerator();
-    
 });
 for(const newQ of newQs){
     newQ.addEventListener("click", function quiz(event){
@@ -112,7 +111,7 @@ clearHigh.addEventListener("click",function(){
 
 // FUNCTIONS====================================================
 
-//Implements timer in the top right
+//  Implements timer in the top right
 function topRightTimer(){
     var interval = setInterval(function(){
         time--;
@@ -123,14 +122,14 @@ function topRightTimer(){
     }, 1000);
 };
 
-//hides button that causes issues
+//  hides button that causes issues
 function glitchHide(){
     viewHighscore.style.display = "none"
     show.style.display = "block"
     starter.style.display = "none"
 };
 
-//generates new question and answers
+//  generates new question and answers
 function qGenerator(){
     var i = Math.floor(Math.random()*questionSet.length);
     question.textContent = questionSet[i][0];
@@ -141,10 +140,10 @@ function qGenerator(){
     questionSet.splice(i,1);
 };
 
-//notifies if your answer was incorrect
+//  notifies if your answer was incorrect
 function incorrectAction(){
     incorrect.style.display = "block";
-    time = time-20;
+    time = time-5;
     function response(){
         correct.style.display = "none";
         incorrect.style.display = "none";
@@ -152,7 +151,7 @@ function incorrectAction(){
     setTimeout(response,500);  
 };
 
-//notifies if your answer was correct
+//  notifies if your answer was correct
 function correctAction(){
     correct.style.display = "block"; 
     function response(){
@@ -162,7 +161,7 @@ function correctAction(){
     setTimeout(response,500);
 };
 
-//allows for a pause between answering last question and seeing the submit screen
+//  allows for a pause between answering last question and seeing the submit screen
 function endgamePause(){
     var timeOut = function(){
         btnHide.style.display = "none";
@@ -174,7 +173,7 @@ function endgamePause(){
     setTimeout(timeOut,500);  
 };
 
-//adds score to scoreboard and local storage
+//  adds score to scoreboard and local storage
 function addScore(){
     scoreArr.push({name: initialInput.value, value: (time)});
     scoreArr.sort(function(a, b){
@@ -183,7 +182,7 @@ function addScore(){
     localStorage.setItem("permScore", JSON.stringify(scoreArr));
 };
 
-//dynamically adds list of scores to html
+//  dynamically adds list of scores to html
 function generateHighscores(){
     var ol = document.createElement("ol");
     ol.className = "list";
@@ -196,7 +195,7 @@ function generateHighscores(){
     }
 };
 
-//resets variables that get changed while playing
+//  resets variables that get changed while playing
 function resetVars(){
     time = 90
     viewHighscore.style.display = "block"
@@ -212,7 +211,7 @@ function resetVars(){
     ];
 };
 
-//clears highscores
+//  clears highscores
 function clearScores(){
     if (confirm("Are you sure you want to clear all high scores?")===true){
        var ol = document.querySelector(".list")

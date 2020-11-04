@@ -1,3 +1,6 @@
+ol{
+    padding-left: 0px;
+}
 .hiScor h1{
     padding: 15px;
     border-bottom:1px solid lightgray;
@@ -18,6 +21,9 @@ a:hover{
     margin-top: 100px;
     width: 50%;
 }
+.hide{
+    display: none;
+}
 .responses{
     text-align: center;
 }
@@ -30,16 +36,11 @@ a:hover{
     text-align: left;
     margin-top: 155px;
 }
-.btnHide{
-    display: none;
-}
 .viewHighscore{
     height:50px;
     margin-top: 5px;
 }
-ol{
-    padding-left: 0px;
-}
+
 .highScores{
     text-align: left;
     font-weight: bolder;
@@ -49,26 +50,25 @@ ol{
     margin: auto;
     margin-left: 25px;
 }
-.hide{
-    display: none;
-}
 .initialInput{
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
 }
+.btnHide{
+    display: none;
+}
 .playButton{
     margin-top:20px;
     border-top: 1px solid lightgray;
 }
-#buttons{
+.buttons{
     padding: 15px;
     border-top:1px solid lightgray;
 }
 #timer{
     float: right;
 } 
-
 #clearHigh{
     position: absolute;
     text-align: center;
