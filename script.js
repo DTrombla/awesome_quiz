@@ -34,7 +34,7 @@ var questionSet = [
     ["Which of the following are capabilities of functions in JavaScript?", "Return a value", "Accept parameters and Return a value", "Accept parameters", "None of the above"],
     ["Which of the following is not a valid JavaScript variable name?", "2names", "_first_and_last_neames", "FirstAndLast", "None of the above"],
     [" ______ tag is an extension to HTML that can enclose any number of JavaScript statements.", "<script>", "<body>", "<head>", "<title>"],
-    ["Why do JavaScript and Java have similar name?", "JavaScript is a stripped-down version of Java", "JavaScript's syntax is loosely based on Java's", "They both originated on the island of Java", "None of the above"],
+    ["Why do JavaScript and Java have similar names?", "JavaScript is a stripped-down version of Java", "JavaScript's syntax is loosely based on Java's", "They both originated on the island of Java", "None of the above"],
 ];
 var correctAnswerSet = ["para1.value='New Text';", "Ampersand, semicolon", "an object-oriented scripting language.", "Client", "If", "Accept parameters", "2names", "<script>", "JavaScript's syntax is loosely based on Java's"] //<--------need to enter actual answers
 
@@ -119,7 +119,7 @@ function topRightTimer(){
     var interval = setInterval(function(){
         time--;
         timer.textContent = "Score/Time: "+time.toString()
-        if(time === 0 || endGame.style.display==="block"){
+        if(time <= 0 || endGame.style.display==="block"){
             clearInterval(interval);
         }
     }, 1000);
@@ -172,7 +172,7 @@ function endgamePause(){
         correct.style.display = "none";
         incorrect.style.display = "none";
         endGame.style.display = "block"; 
-        finalScore.textContent = "Score: " + (time-1).toString();
+        finalScore.textContent = "Score: " + (time).toString();
     }
     setTimeout(timeOut,500);  
 };
@@ -214,14 +214,14 @@ function resetVars(){
         ["Which of the following are capabilities of functions in JavaScript?","Return a value","Accept parameters and Return a value","Accept parameters","None of the above"],
         ["HWhich of the following is not a valid JavaScript variable name?","2names","_first_and_last_neames","FirstAndLast","None of the above"],
         [" ______ tag is an extension to HTML that can enclose any number of JavaScript statements.","<script>","<body>","<head>","<title>"],
-        ["Why so JavaScript and Java have similar name?","FJavaScript is a stripped-down version of Java","JavaScript's syntax is loosely based on Java's","They both originated on the island of Java","None of the above"],
+        ["Why do JavaScript and Java have similar names?","JavaScript is a stripped-down version of Java","JavaScript's syntax is loosely based on Java's","They both originated on the island of Java","None of the above"],
     ];
 };
 
 //  clears highscores
 function clearScores(){
     if (confirm("Are you sure you want to clear all high scores?")===true){
-       var ol = document.querySelector(".list")
+        var ol = document.querySelector(".list")
         scoreArr = [];
         highScores.style.display = "none";
         ol.remove();
