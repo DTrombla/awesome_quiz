@@ -36,7 +36,7 @@ var questionSet = [
     [" ______ tag is an extension to HTML that can enclose any number of JavaScript statements.", "<script>", "<body>", "<head>", "<title>"],
     ["Why do JavaScript and Java have similar names?", "JavaScript is a stripped-down version of Java", "JavaScript's syntax is loosely based on Java's", "They both originated on the island of Java", "None of the above"],
 ];
-var correctAnswerSet = ["para1.value='New Text';", "Ampersand, semicolon", "an object-oriented scripting language.", "Client", "If", "Accept parameters", "2names", "<script>", "JavaScript's syntax is loosely based on Java's"] //<--------need to enter actual answers
+var correctAnswerSet = ["para1.value='New Text';", "Ampersand, semicolon", "an object-oriented scripting language.", "Client", "If", "Accept parameters and Return a value", "2names", "<script>", "JavaScript's syntax is loosely based on Java's"] //<--------need to enter actual answers
 
 //  Code for Game==================================================================================
 
@@ -99,6 +99,7 @@ playButton.addEventListener("click", function(){
     if(scoreArr.length>0){
         ol.remove();
     }
+    timer.style.display = "block";
     game.style.display= "block";
     hiScor.style.display = "none";
     if(endGame.style.display = "block"){
@@ -146,7 +147,8 @@ function qGenerator(){
 //  notifies if your answer was incorrect
 function incorrectAction(){
     incorrect.style.display = "block";
-    time = time-5;
+    time = time-5
+    timer.textContent = "Score/Time: "+(time).toString()
     function response(){
         correct.style.display = "none";
         incorrect.style.display = "none";
