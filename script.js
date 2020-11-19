@@ -1,7 +1,7 @@
 
 var game = document.querySelector(".game")
 var timer = document.querySelector("#timer");
-var time = 90;
+var time = 5;
 var answerStart = document.querySelector(".answerStart");
 var viewHighscore = document.querySelector(".viewHighscore");
 var starter = document.querySelector(".starter");
@@ -53,7 +53,7 @@ answerStart.addEventListener("click", function startQuiz(){
 for(const newQ of newQs){
     newQ.addEventListener("click", function quiz(event){
         var target = event.target.textContent;
-        if(questionSet.length == 0){
+         if(questionSet.length == 0){
             if(correct.style.display ==="block" || incorrect.style.display ==="block"){
                 correct.style.display = "none";
                 incorrect.style.display = "none";
@@ -121,6 +121,7 @@ function topRightTimer(){
         time--;
         timer.textContent = "Score/Time: "+time.toString()
         if(time <= 0 || endGame.style.display==="block"){
+            endgamePause();
             clearInterval(interval);
         }
     }, 1000);
