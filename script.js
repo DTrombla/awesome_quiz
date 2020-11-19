@@ -1,7 +1,7 @@
 
 var game = document.querySelector(".game")
 var timer = document.querySelector("#timer");
-var time = 5;
+var time = 90;
 var answerStart = document.querySelector(".answerStart");
 var viewHighscore = document.querySelector(".viewHighscore");
 var starter = document.querySelector(".starter");
